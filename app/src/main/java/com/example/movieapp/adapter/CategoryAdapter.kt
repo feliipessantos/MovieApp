@@ -11,7 +11,7 @@ import com.example.movieapp.model.Movie
 
 class CategoryAdapter(
     private val context: Context,
-    private val categoryList: MutableList<Category>
+    val categoryList: MutableList<Category>
 
 ) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolderCategory>() {

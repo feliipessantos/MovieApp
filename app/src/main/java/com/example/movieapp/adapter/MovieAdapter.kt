@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.movieapp.databinding.MovieItemBinding
 import com.example.movieapp.model.Movie
 
@@ -17,7 +18,7 @@ class MovieAdapter(private val context: Context, private val movieList: MutableL
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.poster.setImageResource(movieList[position].poster!!)
+        Glide.with(context).load(movieList[position].poster).centerCrop().into(holder.poster)
     }
 
     override fun getItemCount() = movieList.size
