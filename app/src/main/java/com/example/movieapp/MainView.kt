@@ -70,7 +70,7 @@ class MainView : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Categories>, t: Throwable) {
-
+                Toast.makeText(applicationContext, "Error",Toast.LENGTH_SHORT).show()
             }
 
         })
